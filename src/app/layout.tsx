@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 const roboto = Roboto({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["300", "400", "500", "700"],
 });
 export const metadata = {
   title: "HCG",
