@@ -42,7 +42,7 @@ const Solutions = () => {
     <>
       <div className="mx-auto w-9/10 pb-8 md:w-5/6">
         <Title title="Solutions" className="mb-8" />
-        <div className="mx-auto hidden gap-4 md:flex">
+        <div className="mx-auto hidden gap-4 lg:flex">
           {solutionsInfos.map(({ cardTitle, cardText, imageSrc }, index) => (
             <motion.div key={index} {...solutionsAnimation(index * 0.3)}>
               <SolutionCard
@@ -53,7 +53,7 @@ const Solutions = () => {
             </motion.div>
           ))}
         </div>
-        <div className="flex justify-center gap-4 md:hidden">
+        <div className="flex justify-center gap-4 lg:hidden">
           <button
             onClick={() => carouselApi?.scrollTo(currentIndex - 1)}
             className="cursor-pointer"
