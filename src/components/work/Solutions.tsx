@@ -18,10 +18,17 @@ import { useState, useEffect } from "react";
 const solutionsAnimation = (delay = 0) => ({
   initial: { scale: 0 },
   whileInView: { scale: 1.0 },
-  whileHover: { scale: 1.03 },
   transition: {
     duration: 0.5,
     delay,
+  },
+});
+
+const hoverAnimation = () => ({
+  whileHover: { scale: 1.03 },
+  transition: {
+    duration: 0.2,
+    delay: 0,
   },
 });
 
@@ -44,12 +51,14 @@ const Solutions = () => {
         <Title title="Solutions" className="mb-8" />
         <div className="mx-auto hidden gap-4 lg:flex">
           {solutionsInfos.map(({ cardTitle, cardText, imageSrc }, index) => (
-            <motion.div key={index} {...solutionsAnimation(index * 0.3)}>
-              <SolutionCard
-                cardTitle={cardTitle}
-                cardText={cardText}
-                imageSrc={imageSrc}
-              />
+            <motion.div key={index} {...hoverAnimation()}>
+              <motion.div {...solutionsAnimation(index * 0.3)} viewport={{ once: true}}>
+                <SolutionCard
+                  cardTitle={cardTitle}
+                  cardText={cardText}
+                  imageSrc={imageSrc}
+                />
+              </motion.div>
             </motion.div>
           ))}
         </div>
