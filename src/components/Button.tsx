@@ -9,7 +9,7 @@ interface ButtonProps {
 
 const buttonAnimation = {
   initial: { scale: 1, rotate: 0 },
-  whileHover: { scale: 1.2, rotate: [0, 0, 10, 10, 0] },
+  whileHover: { scale: 1.15, rotate: [0, 0, 10, 10, 0] },
 };
 
 const Button = ({ text, href }: ButtonProps) => {

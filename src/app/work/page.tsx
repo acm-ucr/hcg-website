@@ -22,8 +22,8 @@ const Work = () => {
       <Carousel data={clientCarouselData} />
       <Solutions />
       <ContactUs
-        buttonText="Learn More"
-        buttonHref="/work"
+        buttonText="Contact Us"
+        buttonHref="/"
         text="Driven by a passion for consulting, a dedication to transformative
           collaborations, and experience from top firms, we're always eager to
           tackle fresh challenges."
