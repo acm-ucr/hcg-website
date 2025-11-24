@@ -17,7 +17,7 @@ const ContactUs = ({
   titleText,
 }: ContactUsProps) => {
   return (
-    <div className="bg-hcg-black relative flex min-h-[50vh] flex-col items-center justify-center text-center text-white">
+    <div className="bg-hcg-black relative flex flex-col items-center justify-center py-10 text-center text-white lg:px-25 lg:py-25">
       <Image
         src={contactUsBG}
         alt="Gold Stripes"
@@ -25,8 +25,8 @@ const ContactUs = ({
         className="absolute z-0 h-full w-full"
       />
       {titleText && <Title title={titleText} color="text-white" />}
-      <p className="text-md z-20 mb-6 w-4/5 p-6 md:w-3/4 md:text-xl">{text}</p>
-      <div className="z-20">
+      <p className="text-md z-20 w-4/5 pt-6 md:w-3/4 md:text-xl">{text}</p>
+      <div className="z-20 pt-6">
         <Button text={buttonText} href={buttonHref} />
       </div>
     </div>
