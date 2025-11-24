@@ -1,6 +1,6 @@
-import Trend from "@/public/work/solutions/trend.webp";
-import Puzzle from "@/public/work/solutions/puzzle.webp";
-import Gear from "@/public/work/solutions/gear.webp";
+import Trend from "@/public/work/solutions/trend.svg";
+import Puzzle from "@/public/work/solutions/puzzle.svg";
+import Gear from "@/public/work/solutions/gear.svg";
 
 import { StaticImageData } from "next/image";
 
@@ -14,7 +14,7 @@ export const solutionsInfos: SolutionInfo[] = [
   {
     cardTitle: "MARKET INTELLIGENCE",
     cardText:
-      "By deciphering competitor strategies, strengths, and potential vulnerabilities, through comprehensive competitive intelligence research from our team, we are able to provide our clients with a detailed roadmap for their own market positioning and growth.Alongside this, our team uses data models to project sales and cost trends to ensure that our clients can make informed decisions that are underpinned by rich market insights.",
+      "By deciphering competitor strategies, strengths, and potential vulnerabilities, through comprehensive competitive intelligence research from our team, we are able to provide our clients with a detailed roadmap for their own market positioning and growth. Alongside this, our team uses data models to project sales and cost trends to ensure that our clients can make informed decisions that are underpinned by rich market insights.",
     imageSrc: Trend,
   },
   {

@@ -18,11 +18,15 @@ import { useState, useEffect } from "react";
 const solutionsAnimation = (delay = 0) => ({
   initial: { scale: 0 },
   whileInView: { scale: 1.0 },
-  whileHover: { scale: 1.03 },
   transition: {
     duration: 0.5,
     delay,
   },
+});
+
+const hoverAnimation = () => ({
+  whileHover: { scale: 1.03 },
+  transition: { duration: 0.2 },
 });
 
 const Solutions = () => {
@@ -42,18 +46,24 @@ const Solutions = () => {
     <>
       <div className="mx-auto w-9/10 pb-8 md:w-5/6">
         <Title title="Solutions" className="mb-8" />
-        <div className="mx-auto hidden gap-4 md:flex">
+        <div className="mx-auto hidden gap-4 lg:flex">
           {solutionsInfos.map(({ cardTitle, cardText, imageSrc }, index) => (
-            <motion.div key={index} {...solutionsAnimation(index * 0.3)}>
-              <SolutionCard
-                cardTitle={cardTitle}
-                cardText={cardText}
-                imageSrc={imageSrc}
-              />
+            <motion.div key={index} {...hoverAnimation()}>
+              <motion.div
+                {...solutionsAnimation(index * 0.2)}
+                viewport={{ once: true }}
+                className="h-full"
+              >
+                <SolutionCard
+                  cardTitle={cardTitle}
+                  cardText={cardText}
+                  imageSrc={imageSrc}
+                />
+              </motion.div>
             </motion.div>
           ))}
         </div>
-        <div className="flex justify-center gap-4 md:hidden">
+        <div className="flex justify-center gap-4 lg:hidden">
           <button
             onClick={() => carouselApi?.scrollTo(currentIndex - 1)}
             className="cursor-pointer"
