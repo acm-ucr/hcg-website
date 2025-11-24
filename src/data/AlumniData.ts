@@ -59,7 +59,7 @@ export const AlumniData: AlumniInfoProps[] = [
     name: "Sabrina Yang",
     role: "ADVISOR",
     image: Sabrina,
-    currentOccupation: "Private Bank Associate at JP Morgan",
+    currentOccupation: "Analyst at JP Morgan",
     linkedin: "https://www.linkedin.com/in/sabrina-z-yang/",
   },
   {
