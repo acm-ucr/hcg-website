@@ -9,7 +9,7 @@ const OurTeam = () => {
         Our members come from all majors and bring leadership experiences from a
         wide variety of professional backgrounds:
       </p>
-      <Button text="Learn More" href="/work" />
+      <Button text="Learn More" href="/board" />
     </div>
   );
 };

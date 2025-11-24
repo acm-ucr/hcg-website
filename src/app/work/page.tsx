@@ -15,15 +15,15 @@ const Work = () => {
       <Header title="Client Work" headerPicture={workHeader} />
       <InfoSection
         title="Our Services"
-        text="Established in fall 2022 as the first and only consulting club on campus, Highlander Consulting Group is driven by a mission to offer members real-world experience through partnerships with diverse firms. We're dedicated to creating and delivering top-tier solutions that drive measurable results."
+        text="Established in Fall 2022 as the first and only consulting club on campus, Highlander Consulting Group is driven by a mission to offer members real-world experience through partnerships with diverse firms. We're dedicated to creating and delivering top-tier solutions that drive measurable results."
         image={OurServicesImage}
         imageAlt="Our Services"
       />
       <Carousel data={clientCarouselData} />
       <Solutions />
       <ContactUs
-        buttonText="Learn More"
-        buttonHref="/work"
+        buttonText="Contact Us"
+        buttonHref="/"
         text="Driven by a passion for consulting, a dedication to transformative
           collaborations, and experience from top firms, we're always eager to
           tackle fresh challenges."
