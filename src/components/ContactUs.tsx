@@ -17,7 +17,7 @@ const ContactUs = ({
   titleText,
 }: ContactUsProps) => {
   return (
-    <div className="bg-hcg-black relative flex flex-col items-center justify-center py-10 text-center text-white lg:px-25 lg:py-25">
+    <div className="bg-hcg-black relative flex flex-col items-center justify-center py-8 text-center text-white lg:p-25">
       <Image
         src={contactUsBG}
         alt="Gold Stripes"
