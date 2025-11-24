@@ -1,6 +1,6 @@
-import Trend from "@/public/work/solutions/trend.webp";
-import Puzzle from "@/public/work/solutions/puzzle.webp";
-import Gear from "@/public/work/solutions/gear.webp";
+import Trend from "@/public/work/solutions/trend.svg";
+import Puzzle from "@/public/work/solutions/puzzle.svg";
+import Gear from "@/public/work/solutions/gear.svg";
 
 import { StaticImageData } from "next/image";
 
