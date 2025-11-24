@@ -26,10 +26,7 @@ const solutionsAnimation = (delay = 0) => ({
 
 const hoverAnimation = () => ({
   whileHover: { scale: 1.03 },
-  transition: {
-    duration: 0.2,
-    delay: 0,
-  },
+  transition: { duration: 0.2 },
 });
 
 const Solutions = () => {
@@ -53,7 +50,7 @@ const Solutions = () => {
           {solutionsInfos.map(({ cardTitle, cardText, imageSrc }, index) => (
             <motion.div key={index} {...hoverAnimation()}>
               <motion.div
-                {...solutionsAnimation(index * 0.3)}
+                {...solutionsAnimation(index * 0.2)}
                 viewport={{ once: true }}
                 className="h-full"
               >
