@@ -72,7 +72,7 @@ const Navigation = () => {
 
       <div
         className={`from-hcg-black to-hcg-gold text-hcg-white fixed top-[15vh] right-0 left-0 z-50 flex flex-col items-center justify-start bg-linear-to-r transition-all duration-300 md:hidden ${
-          visibility ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          visibility ? "max-h-96 opacity-100 pointer-events-auto" : "max-h-0 opacity-0 pointer-events-none"
         }`}
       >
         <div className="flex w-full max-w-xl flex-col gap-2 pb-4">
