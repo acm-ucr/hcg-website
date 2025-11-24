@@ -52,7 +52,10 @@ const Solutions = () => {
         <div className="mx-auto hidden gap-4 lg:flex">
           {solutionsInfos.map(({ cardTitle, cardText, imageSrc }, index) => (
             <motion.div key={index} {...hoverAnimation()}>
-              <motion.div {...solutionsAnimation(index * 0.3)} viewport={{ once: true}}>
+              <motion.div
+                {...solutionsAnimation(index * 0.3)}
+                viewport={{ once: true }}
+              >
                 <SolutionCard
                   cardTitle={cardTitle}
                   cardText={cardText}
