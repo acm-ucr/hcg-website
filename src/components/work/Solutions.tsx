@@ -55,6 +55,7 @@ const Solutions = () => {
               <motion.div
                 {...solutionsAnimation(index * 0.3)}
                 viewport={{ once: true }}
+                className="h-full"
               >
                 <SolutionCard
                   cardTitle={cardTitle}
