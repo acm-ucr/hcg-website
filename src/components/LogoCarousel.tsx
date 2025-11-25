@@ -17,6 +17,13 @@ const logoCarouselAnimation = (totalWidth = 0, duration = 0) => ({
   },
 });
 
+const logoHoverAnimation = () => ({
+  whileHover: {
+    scale: 1.15,
+    rotate: 3,
+  },
+});
+
 const LogoCarousel = ({ data }: { data: CarouselItem[] }) => {
   const duplicatedData = [...data, ...data, ...data, ...data];
   const totalWidth = data.length * 192;
@@ -29,8 +36,9 @@ const LogoCarousel = ({ data }: { data: CarouselItem[] }) => {
         {...logoCarouselAnimation(totalWidth, duration)}
       >
         {duplicatedData.map(({ name, icon }, index) => (
-          <div
+          <motion.div
             key={index}
+            {...logoHoverAnimation()}
             className="bg-hcg-white flex w-48 flex-shrink-0 items-center justify-center px-8 py-4"
           >
             <Image
@@ -38,7 +46,7 @@ const LogoCarousel = ({ data }: { data: CarouselItem[] }) => {
               alt={`${name} logo`}
               className="w-auto object-contain"
             />
-          </div>
+          </motion.div>
         ))}
       </motion.div>
     </div>
