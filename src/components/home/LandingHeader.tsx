@@ -32,6 +32,13 @@ const textChild: Variants = {
   },
 };
 
+const subTextAnimation = () => ({
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { delay: 1, duration: 0.8 },
+});
+
 const title = "Highlander Consulting Group";
 const words = title.split(" ");
 
@@ -69,13 +76,7 @@ const LandingHeader = () => {
             </span>
           ))}
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 1, duration: 0.8 }}
-          className="mt-2 text-lg md:text-xl"
-        >
+        <motion.div className="mt-2 text-lg md:text-xl" {...subTextAnimation()}>
           UC Riverside's Premier Consulting Organization
         </motion.div>
       </div>
