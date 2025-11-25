@@ -34,6 +34,13 @@ const textChild: Variants = {
   },
 };
 
+const staggerLetters = () => ({
+  variants: { textContainer },
+  initial: "hidden",
+  whileInView: "visible",
+  viewport: { once: true },
+});
+
 const Header = ({ title, headerPicture }: HeaderProps) => {
   return (
     <div className="relative mb-4 h-[28vh] w-full md:h-[38vh] xl:h-[52vh]">
@@ -46,10 +53,7 @@ const Header = ({ title, headerPicture }: HeaderProps) => {
       />
       <motion.div
         className="absolute top-1/2 w-full -translate-y-1/2 p-5 text-center text-3xl font-medium text-white md:text-5xl"
-        variants={textContainer}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
+        {...staggerLetters()}
       >
         {title.split("").map((char, index) => (
           <motion.span
