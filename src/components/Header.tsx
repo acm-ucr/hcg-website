@@ -6,7 +6,7 @@ interface HeaderProps {
   headerPicture: StaticImageData;
 }
 
-const textContainer = {
+const textContainer: Variants = {
   hidden: { opacity: 0, y: -30 },
   visible: {
     opacity: 1,
@@ -35,7 +35,7 @@ const textChild: Variants = {
 };
 
 const staggerLetters = () => ({
-  variants: { textContainer },
+  variants: textContainer,
   initial: "hidden",
   whileInView: "visible",
   viewport: { once: true },
