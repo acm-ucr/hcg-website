@@ -1,16 +1,45 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
-import { motion } from "motion/react";
+import { motion, type Variants } from "motion/react";
 interface HeaderProps {
   title: string;
   headerPicture: StaticImageData;
 }
 
-const headerAnimation = {
-  initial: { opacity: 0, y: -30 },
-  whileInView: { opacity: 1, y: 0 },
-  transition: { duration: 0.8 },
+const textContainer: Variants = {
+  hidden: { opacity: 0, y: -30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      staggerChildren: 0.05,
+      delayChildren: 0.04,
+    },
+  },
 };
+
+const textChild: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      damping: 12,
+      stiffness: 200,
+    },
+  },
+};
+
+const staggerLetters = () => ({
+  variants: textContainer,
+  initial: "hidden",
+  whileInView: "visible",
+  viewport: { once: true },
+});
 
 const Header = ({ title, headerPicture }: HeaderProps) => {
   return (
@@ -24,9 +53,17 @@ const Header = ({ title, headerPicture }: HeaderProps) => {
       />
       <motion.div
         className="absolute top-1/2 w-full -translate-y-1/2 p-5 text-center text-3xl font-medium text-white md:text-5xl"
-        {...headerAnimation}
+        {...staggerLetters()}
       >
-        {title}
+        {title.split("").map((char, index) => (
+          <motion.span
+            key={`${char}-${index}`}
+            variants={textChild}
+            className="inline-block"
+          >
+            {char === " " ? "\u00A0" : char}
+          </motion.span>
+        ))}
       </motion.div>
     </div>
   );

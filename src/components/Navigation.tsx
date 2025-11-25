@@ -16,6 +16,12 @@ const fadeIn = (delay = 0) => ({
   transition: { duration: 0.5, delay },
 });
 
+const logoFadeIn = () => ({
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
+  transition: { duration: 0.5 },
+});
+
 const hoverAnimation = {
   whileHover: { scale: 1.05 },
   transition: {
@@ -35,7 +41,7 @@ const Navigation = () => {
   return (
     <div>
       <div className="from-hcg-black to-hcg-gold fixed inset-x-0 top-0 z-50 flex h-[15vh] items-center justify-between bg-linear-to-r p-8">
-        <div className="sticky flex w-full">
+        <motion.div className="sticky flex w-full" {...logoFadeIn()}>
           <Link href="/">
             <Image
               src={SmallLogo}
@@ -43,11 +49,15 @@ const Navigation = () => {
               className="h-14 w-auto md:h-18"
             />
           </Link>
-        </div>
+        </motion.div>
 
         <div className="text-hcg-white hidden h-auto items-center gap-8 pr-8 text-xl md:flex">
           {navbarLinks.map(({ name, link }, index) => (
-            <motion.div {...fadeIn(index * 0.15)} key={index} className="w-max">
+            <motion.div
+              {...fadeIn((index + 1) * 0.15)}
+              key={index}
+              className="w-max"
+            >
               <motion.div {...hoverAnimation}>
                 <Link
                   href={link}
