@@ -12,23 +12,23 @@ export interface InfoSectionProps {
 }
 
 const infoSectionHeaderAnimation = {
-  initial: { opacity: 0, x: -50},
-  whileInView: {  opacity: 1, x: 0 },
+  initial: { opacity: 0, x: -50 },
+  whileInView: { opacity: 1, x: 0 },
   transition: { duration: 0.4, delay: 0.1 },
   viewport: { once: true, amount: 1.0 },
-}
+};
 
 const infoSectionTextAnimation = {
-  initial: {  opacity: 0, y: -50 },
-  whileInView: {  opacity: 1, y: 0 },
-  transition: { duration: 0.4, delay: 0.2},
-  viewport: { once: true, amount: 0.8},
+  initial: { opacity: 0, y: -50 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.4, delay: 0.2 },
+  viewport: { once: true, amount: 0.8 },
 };
 
 const imageAnimation = {
   initial: { opacity: 0, x: -20 },
   whileInView: { opacity: 1, x: 0 },
-  transition: { duration: 0.3, delay:0.1 },
+  transition: { duration: 0.3, delay: 0.1 },
   viewport: { once: true, amount: 0.5 },
 };
 
