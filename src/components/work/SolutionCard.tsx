@@ -9,8 +9,8 @@ interface SolutionCardProps {
 
 const SolutionCard = ({ cardTitle, cardText, imageSrc }: SolutionCardProps) => {
   return (
-    <div className="bg-hcg-pastel-brown-secondary h-full w-full rounded-lg p-6">
-      <div className="flex h-full flex-col items-center space-y-8 rounded-lg border-3 border-white px-2 pt-2 text-center text-white">
+    <div className="bg-hcg-pastel-brown-secondary h-full w-full rounded-lg p-4 md:p-6">
+      <div className="flex h-full flex-col items-center space-y-4 rounded-lg border-3 border-white px-2 pt-2 text-center text-white md:space-y-8">
         <Image
           src={imageSrc}
           alt={"Image of " + cardTitle}

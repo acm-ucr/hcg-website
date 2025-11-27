@@ -23,7 +23,7 @@ const curtainAnimation = (delay = 0) => ({
     scaleX: 0,
   },
   transition: {
-    duration: 0.3,
+    duration: 0.4,
     delay,
   },
 });
@@ -60,8 +60,8 @@ const Solutions = () => {
                   imageSrc={imageSrc}
                 />
                 <motion.div
-                  {...curtainAnimation(index * 0.2)}
-                  viewport={{ once: true, amount: 0.2 }}
+                  {...curtainAnimation(index * 0.15)}
+                  viewport={{ once: true, amount: 0.3 }}
                   className="bg-hcg-white absolute inset-0 origin-left"
                 />
               </div>
@@ -95,6 +95,11 @@ const Solutions = () => {
                 ),
               )}
             </CarouselContent>
+            <motion.div
+              {...curtainAnimation()}
+              viewport={{ once: true, amount: 0.3 }}
+              className="bg-hcg-white absolute inset-0 origin-left"
+            />
           </Carousel>
           <button
             onClick={() => carouselApi?.scrollTo(currentIndex + 1)}
