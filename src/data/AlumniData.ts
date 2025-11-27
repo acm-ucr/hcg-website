@@ -21,13 +21,6 @@ interface AlumniInfoProps {
 
 export const AlumniData: AlumniInfoProps[] = [
   {
-    name: "Arvind Upadhya",
-    role: "ADVISOR",
-    image: Arvind,
-    currentOccupation: "Sales Management Intern at PepsiCo",
-    linkedin: "https://www.linkedin.com/in/arvind-upadhya-9614b621a/",
-  },
-  {
     name: "Hammad Manjra",
     role: "FOUNDER & ADVISOR",
     image: Hammad,
@@ -35,25 +28,11 @@ export const AlumniData: AlumniInfoProps[] = [
     linkedin: "https://www.linkedin.com/in/hammadmanjra/",
   },
   {
-    name: "Preksha Kaushik",
+    name: "Varun Srivastava",
     role: "ADVISOR",
-    image: Preksha,
-    currentOccupation: "Digital Sales Associate Manager at PepsiCo",
-    linkedin: "https://www.linkedin.com/in/preksha-kaushik/",
-  },
-  {
-    name: "Rithika Erumadi",
-    role: "ADVISOR",
-    image: Rithika,
-    currentOccupation: "Enterprise Development Representative at Verkada",
-    linkedin: "https://www.linkedin.com/in/rithika-erumadi/",
-  },
-  {
-    name: "Saamir Appali",
-    role: "ADVISOR",
-    image: Saamir,
-    currentOccupation: "Advisory Consultant at Deloitte",
-    linkedin: "https://www.linkedin.com/in/saamirappali/",
+    image: Varun,
+    currentOccupation: "M&A at Optum West",
+    linkedin: "https://www.linkedin.com/in/varunsrivastava01/",
   },
   {
     name: "Sabrina Yang",
@@ -63,11 +42,11 @@ export const AlumniData: AlumniInfoProps[] = [
     linkedin: "https://www.linkedin.com/in/sabrina-z-yang/",
   },
   {
-    name: "Sai Birla",
+    name: "Saamir Appali",
     role: "ADVISOR",
-    image: Sai,
-    currentOccupation: "Technology Risk Consultant at EY",
-    linkedin: "https://www.linkedin.com/in/saibirla/",
+    image: Saamir,
+    currentOccupation: "Advisory Consultant at Deloitte",
+    linkedin: "https://www.linkedin.com/in/saamirappali/",
   },
   {
     name: "Tamanna Dilip",
@@ -77,13 +56,6 @@ export const AlumniData: AlumniInfoProps[] = [
     linkedin: "https://www.linkedin.com/in/tamannadilip/",
   },
   {
-    name: "Tara Wu",
-    role: "ADVISOR",
-    image: Tara,
-    currentOccupation: "Project Manager at Boeing",
-    linkedin: "https://www.linkedin.com/in/tara-wu/",
-  },
-  {
     name: "Tejas Lolge",
     role: "ADVISOR",
     image: Tejas,
@@ -91,10 +63,38 @@ export const AlumniData: AlumniInfoProps[] = [
     linkedin: "https://www.linkedin.com/in/tejas-lolge-056841200/",
   },
   {
-    name: "Varun Srivastava",
+    name: "Preksha Kaushik",
     role: "ADVISOR",
-    image: Varun,
-    currentOccupation: "M&A at Optum West",
-    linkedin: "https://www.linkedin.com/in/varunsrivastava01/",
+    image: Preksha,
+    currentOccupation: "Digital Sales Associate Manager at PepsiCo",
+    linkedin: "https://www.linkedin.com/in/preksha-kaushik/",
+  },
+  {
+    name: "Sai Birla",
+    role: "ADVISOR",
+    image: Sai,
+    currentOccupation: "Technology Risk Consultant at EY",
+    linkedin: "https://www.linkedin.com/in/saibirla/",
+  },
+  {
+    name: "Tara Wu",
+    role: "ADVISOR",
+    image: Tara,
+    currentOccupation: "Project Manager at Boeing",
+    linkedin: "https://www.linkedin.com/in/tara-wu/",
+  },
+  {
+    name: "Arvind Upadhya",
+    role: "ADVISOR",
+    image: Arvind,
+    currentOccupation: "Sales Management Intern at PepsiCo",
+    linkedin: "https://www.linkedin.com/in/arvind-upadhya-9614b621a/",
+  },
+  {
+    name: "Rithika Erumadi",
+    role: "ADVISOR",
+    image: Rithika,
+    currentOccupation: "Enterprise Development Representative at Verkada",
+    linkedin: "https://www.linkedin.com/in/rithika-erumadi/",
   },
 ];
