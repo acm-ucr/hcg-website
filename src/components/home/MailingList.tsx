@@ -14,6 +14,12 @@ const buttonAnimation = {
   whileHover: { scale: 1.2, rotate: [0, 0, 10, 10, 0] },
 };
 
+const zoomAnimation = {
+  initial: { scale: 0 },
+  whileInView: { scale: 1 },
+  transition: { duration: 0.6 },
+};
+
 const MailingList = () => {
   const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -31,7 +37,10 @@ const MailingList = () => {
           }
         }}
       />
-      <div className="flex items-center justify-center py-8">
+      <motion.div
+        {...zoomAnimation}
+        className="flex items-center justify-center py-8"
+      >
         <div className="bg-hcg-gold w-4/5 rounded-2xl p-2">
           <div className="font-hcg-main rounded-2xl border border-white p-8 font-light">
             {isSubmitted ? (
@@ -101,7 +110,7 @@ const MailingList = () => {
             )}
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
