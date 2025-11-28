@@ -11,17 +11,23 @@ export interface InfoSectionProps {
   imageAlt: string;
 }
 
+const infoSectionHeaderAnimation = {
+  initial: { opacity: 0, x: -50 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.4, delay: 0.1 },
+  viewport: { once: true, amount: 1.0 },
+};
+
 const infoSectionTextAnimation = {
-  initial: { opacity: 0, y: -30 },
+  initial: { opacity: 0, y: -50 },
   whileInView: { opacity: 1, y: 0 },
-  transition: { duration: 0.8 },
+  transition: { duration: 0.7, delay: 0.2 },
 };
 
 const imageAnimation = {
-  initial: { opacity: 0, scale: 0.6 },
-  whileInView: { opacity: 1, scale: 1 },
-  transition: { duration: 0.8 },
-  viewport: { once: true },
+  initial: { opacity: 0, x: -20 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.6, delay: 0.1 },
 };
 
 const InfoSection = ({ title, text, image, imageAlt }: InfoSectionProps) => {
@@ -31,7 +37,7 @@ const InfoSection = ({ title, text, image, imageAlt }: InfoSectionProps) => {
         <div className="flex flex-col justify-center space-y-3 md:w-1/2 md:space-y-6">
           <motion.div
             className="mx-auto md:mr-auto md:ml-0"
-            {...infoSectionTextAnimation}
+            {...infoSectionHeaderAnimation}
           >
             <Title title={title} color={"text-hcg-pastel-brown"} />
           </motion.div>
