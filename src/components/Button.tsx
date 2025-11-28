@@ -8,7 +8,9 @@ interface ButtonProps {
 }
 
 const buttonAnimation = {
-  initial: { scale: 1, rotate: 0 },
+  initial: { rotate: 0, y: 10, opacity: 0.4 },
+  whileInView: { y: 0, opacity: 1 },
+  transition: { duration: 1.0 },
   whileHover: { scale: 1.15, rotate: [0, 0, 10, 10, 0] },
 };
 

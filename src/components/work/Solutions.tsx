@@ -15,11 +15,15 @@ import leftArrow from "@/public/work/leftArrow.svg";
 import rightArrow from "@/public/work/rightArrow.svg";
 import { useState, useEffect } from "react";
 
-const solutionsAnimation = (delay = 0) => ({
-  initial: { scale: 0 },
-  whileInView: { scale: 1.0 },
+const curtainAnimation = (delay = 0) => ({
+  initial: {
+    scaleX: 1,
+  },
+  whileInView: {
+    scaleX: 0,
+  },
   transition: {
-    duration: 0.5,
+    duration: 0.4,
     delay,
   },
 });
@@ -46,20 +50,21 @@ const Solutions = () => {
     <>
       <div className="mx-auto w-9/10 pb-8 md:w-5/6">
         <Title title="Solutions" className="mb-8" />
-        <div className="mx-auto hidden gap-4 lg:flex">
+        <div className="mx-auto hidden items-stretch gap-4 lg:flex">
           {solutionsInfos.map(({ cardTitle, cardText, imageSrc }, index) => (
-            <motion.div key={index} {...hoverAnimation()}>
-              <motion.div
-                {...solutionsAnimation(index * 0.2)}
-                viewport={{ once: true }}
-                className="h-full"
-              >
+            <motion.div key={index} {...hoverAnimation()} className="flex-1">
+              <div className="relative h-full overflow-hidden">
                 <SolutionCard
                   cardTitle={cardTitle}
                   cardText={cardText}
                   imageSrc={imageSrc}
                 />
-              </motion.div>
+                <motion.div
+                  {...curtainAnimation(index * 0.15)}
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="bg-hcg-white absolute inset-0 origin-left"
+                />
+              </div>
             </motion.div>
           ))}
         </div>
@@ -90,6 +95,11 @@ const Solutions = () => {
                 ),
               )}
             </CarouselContent>
+            <motion.div
+              {...curtainAnimation()}
+              viewport={{ once: true, amount: 0.3 }}
+              className="bg-hcg-white absolute inset-0 origin-left"
+            />
           </Carousel>
           <button
             onClick={() => carouselApi?.scrollTo(currentIndex + 1)}
