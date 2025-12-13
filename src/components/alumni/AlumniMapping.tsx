@@ -12,22 +12,24 @@ const alumniMappingAnimation = () => ({
 const AlumniMapping = () => {
   return (
     <div className="flex flex-row flex-wrap justify-center">
-      {AlumniData.map((member, index) => (
-        <motion.div
-          key={index}
-          {...alumniMappingAnimation()}
-          className="w-2/3 sm:w-1/2 md:w-1/3"
-        >
-          <MemberCard
+      {AlumniData.map(
+        ({ name, role, currentOccupation, image, linkedin }, index) => (
+          <motion.div
             key={index}
-            name={member.name}
-            role={member.role}
-            currentOccupation={member.currentOccupation}
-            image={member.image}
-            linkedin={member.linkedin}
-          />
-        </motion.div>
-      ))}
+            {...alumniMappingAnimation()}
+            className="w-2/3 sm:w-1/2 md:w-1/3"
+          >
+            <MemberCard
+              key={index}
+              name={name}
+              role={role}
+              currentOccupation={currentOccupation}
+              image={image}
+              linkedin={linkedin}
+            />
+          </motion.div>
+        ),
+      )}
     </div>
   );
 };
