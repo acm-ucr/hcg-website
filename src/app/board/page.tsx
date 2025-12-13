@@ -6,11 +6,13 @@ import workHeader from "@/public/board/boardBG.webp";
 
 const Board = () => {
   return (
-    <div className="">
-      <Header title="Meet the Team" headerPicture={workHeader} />
-      <Title title="Board" />
-      <BoardMapping />
-    </div>
+    <>
+      <div className="">
+        <Header title="Meet the Team" headerPicture={workHeader} />
+        <Title title="Board" />
+        <BoardMapping />
+      </div>
+    </>
   );
 };
 
