@@ -12,7 +12,7 @@ const boardMappingAnimation = () => ({
 const BoardMapping = () => {
   return (
     <div className="flex flex-row flex-wrap justify-center">
-      {boardInfo.map((member, index) => (
+      {boardInfo.map(({ name, title, image, linkedin }, index) => (
         <motion.div
           key={index}
           {...boardMappingAnimation()}
@@ -20,10 +20,10 @@ const BoardMapping = () => {
         >
           <MemberCard
             key={index}
-            name={member.name}
-            role={member.title}
-            image={member.image}
-            linkedin={member.linkedin}
+            name={name}
+            role={title}
+            image={image}
+            linkedin={linkedin}
           />
         </motion.div>
       ))}
