@@ -78,7 +78,7 @@ const MailingList = () => {
                   <div className="text-md mb-2 md:text-xl">
                     Please Select your year*
                   </div>
-                  <div className="flex flex-col gap-3 md:flex-row">
+                  <div className="accent-hcg-black flex flex-col gap-3 md:flex-row">
                     <label>
                       <input
                         type="radio"
