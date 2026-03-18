@@ -21,6 +21,8 @@ const zoomAnimation = {
 };
 
 const MailingList = () => {
+  const [choice, setChoice] = useState("");
+  const [otherText, setOtherText] = useState("");
   const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -44,9 +46,9 @@ const MailingList = () => {
         <div className="bg-hcg-gold w-4/5 rounded-2xl p-2">
           <div className="font-hcg-main rounded-2xl border border-white p-8 font-light">
             {isSubmitted ? (
-              <Title title="Success!" color="text-white" />
+              <Title title="Success!" color="text-hcg-white" />
             ) : (
-              <Title title="Join our Mailing List" color="text-white" />
+              <Title title="Join our Mailing List" color="text-hcg-white" />
             )}
             {isSubmitted ? (
               <div className="text-hcg-white text-md text-center md:text-xl">
@@ -55,45 +57,134 @@ const MailingList = () => {
             ) : (
               <form
                 className="space-y-6"
-                action="https://docs.google.com/forms/d/e/1FAIpQLSdYBvXdgNPhcUOxQMAhJedkRtwbUObEo_49t2xPZTRn6jIjvw/formResponse"
+                action="https://docs.google.com/forms/d/e/1FAIpQLSe4HkxlGfCMuwtKDvYns1TSupv5aLV8RIYINdjFYcbpK0PdBA/formResponse"
                 method="POST"
                 target="hidden_iframe"
                 onSubmit={() => {
                   window.submitted = true;
                 }}
               >
-                <div className="flex flex-col space-y-6 md:flex-row md:space-y-0 md:space-x-6">
-                  <div className="flex-1">
-                    <div className="text-md mb-2 text-white md:text-xl">
-                      First Name
-                    </div>
-                    <input
-                      className="w-full bg-white p-3 focus:outline-none"
-                      name="entry.2094777015"
-                      required
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-md mb-2 text-white md:text-xl">
-                      Last Name
-                    </div>
-                    <input
-                      className="w-full bg-white p-3 focus:outline-none"
-                      name="entry.222275708"
-                      required
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div className="text-md mb-2 text-white md:text-xl">
-                    Email
+                <div className="flex-1">
+                  <div className="text-md text-hcg-white mb-2 md:text-xl">
+                    Name (First, Last)*
                   </div>
                   <input
                     className="w-full bg-white p-3 focus:outline-none"
-                    name="entry.1315568053"
+                    name="entry.62550538"
+                    required
+                  />
+                </div>
+                <div className="text-hcg-white flex-1">
+                  <div className="text-md mb-2 md:text-xl">
+                    Please Select your year*
+                  </div>
+                  <div className="accent-hcg-black flex flex-col gap-3 md:flex-row">
+                    <label>
+                      <input
+                        type="radio"
+                        className="mr-1 bg-white p-3 focus:outline-none"
+                        name="entry.1834392219"
+                        value="Freshman"
+                        checked={choice === "Freshman"}
+                        onChange={(e) => setChoice(e.target.value)}
+                        required
+                      />
+                      Freshman
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        className="mr-1 bg-white p-3 focus:outline-none"
+                        name="entry.1834392219"
+                        value="Sophomore"
+                        checked={choice === "Sophomore"}
+                        onChange={(e) => setChoice(e.target.value)}
+                        required
+                      />
+                      Sophomore
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        className="mr-1 bg-white p-3 focus:outline-none"
+                        name="entry.1834392219"
+                        value="Junior"
+                        checked={choice === "Junior"}
+                        onChange={(e) => setChoice(e.target.value)}
+                        required
+                      />
+                      Junior
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        className="mr-1 bg-white p-3 focus:outline-none"
+                        name="entry.1834392219"
+                        value="Senior"
+                        checked={choice === "Senior"}
+                        onChange={(e) => setChoice(e.target.value)}
+                        required
+                      />
+                      Senior
+                    </label>
+                    <div>
+                      <label className="mr-1">
+                        <input
+                          type="radio"
+                          className="mr-1 bg-white p-3 focus:outline-none"
+                          name="entry.1834392219"
+                          value="__other_option__"
+                          checked={choice === "__other_option__"}
+                          onChange={(e) => setChoice(e.target.value)}
+                          required
+                        />
+                        Other
+                      </label>
+                      {choice === "__other_option__" && (
+                        <input
+                          type="text"
+                          name="entry.1834392219.other_option_response" // The specific text ID
+                          value={otherText}
+                          onChange={(e) => setOtherText(e.target.value)}
+                          placeholder="Please specify..."
+                          className="w-40 bg-white px-1 text-black focus:outline-none"
+                          required={choice === "__other_option__"}
+                        />
+                      )}
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div className="text-md text-hcg-white mb-2 md:text-xl">
+                    Your major & concentration*
+                  </div>
+
+                  <input
+                    className="w-full bg-white p-3 focus:outline-none"
+                    name="entry.1230703577"
+                    required
+                  />
+                </div>
+                <div>
+                  <div className="text-md text-hcg-white mb-2 md:text-xl">
+                    Preferred Email*
+                  </div>
+                  <input
+                    type="email"
+                    className="w-full bg-white p-3 focus:outline-none"
+                    name="entry.1599910903"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
+                  />
+                </div>
+                <div>
+                  <div className="text-md text-hcg-white mb-2 md:text-xl">
+                    Any Questions?
+                  </div>
+                  <input
+                    className="w-full bg-white p-3 focus:outline-none"
+                    name="entry.980921563"
                   />
                 </div>
                 <div className="mt-6 flex cursor-pointer justify-center rounded-lg py-2 md:justify-start">
