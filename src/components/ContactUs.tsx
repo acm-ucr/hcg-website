@@ -2,9 +2,7 @@
 
 import { motion } from "motion/react";
 import Button from "@/components/Button";
-import contactUsBG from "@/public/work/contactUsBG.webp";
 import Title from "@/components/Title";
-import Image from "next/image";
 
 interface ContactUsProps {
   buttonText: string;
