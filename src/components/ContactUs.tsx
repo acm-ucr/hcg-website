@@ -26,14 +26,8 @@ const ContactUs = ({
   titleText,
 }: ContactUsProps) => {
   return (
-    <div className="bg-hcg-black relative flex flex-col items-center justify-center py-8 text-center text-white lg:p-25">
-      <Image
-        src={contactUsBG}
-        alt="Gold Stripes"
-        objectFit="cover"
-        className="absolute z-0 h-full w-full"
-      />
-      {titleText && <Title title={titleText} color="text-white" />}
+    <div className="bg-hcg-white relative flex flex-col items-center justify-center py-8 text-center text-black">
+      {titleText && <Title title={titleText} color="text-black" />}
       <motion.p
         {...textAnimation}
         className="text-md z-20 w-4/5 pt-6 md:w-3/4 md:text-xl"
