@@ -40,7 +40,7 @@ const Navigation = () => {
 
   return (
     <div>
-      <div className="from-hcg-black to-hcg-gold fixed inset-x-0 top-0 z-50 flex h-[15vh] items-center justify-between bg-linear-to-r p-8">
+      <div className="bg-hcg-black fixed inset-x-0 top-0 z-50 flex h-[15vh] items-center justify-between bg-linear-to-r p-8">
         <motion.div className="sticky flex w-full" {...logoFadeIn()}>
           <Link href="/">
             <Image

@@ -25,7 +25,7 @@ const MemberCard = ({
 }: MemberCardProps) => {
   return (
     <div className="flex h-full flex-col items-center justify-between p-6 text-center">
-      <Image src={image} alt={name} className="mb-4 rounded-full" />
+      <Image src={image} alt={name} className="mb-4 w-64 rounded-full" />
 
       <div className="text-md mb-2 md:text-xl">{name}</div>
 
