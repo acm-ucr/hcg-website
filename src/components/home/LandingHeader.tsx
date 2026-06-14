@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, type Variants } from "motion/react";
-import LandingPageLogo from "@/public/groupPhoto.webp";
+import LandingPageLogo from "@/public/groupPhoto.jpg";
 import Image from "next/image";
 
 const textContainer = {
@@ -44,12 +44,12 @@ const words = title.split(" ");
 
 const LandingHeader = () => {
   return (
-    <div className="relative flex h-[75vh] w-full flex-col items-center justify-center">
+    <div className="relative flex h-[75vh] w-full flex-col items-center justify-center bg-[#929292]">
       <Image
         src={LandingPageLogo}
         alt="General Header"
         fill
-        className="object-cover opacity-100"
+        className="object-cover opacity-41"
         priority
       />
 

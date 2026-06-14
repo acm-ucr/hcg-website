@@ -11,6 +11,11 @@ import Tara from "@/public/alumni/TaraWu.webp";
 import Tejas from "@/public/alumni/TejasLolge.webp";
 import Varun from "@/public/alumni/VarunSrivastava.webp";
 
+import FarisImg from "@/public/alumni/FarisMohammady.webp";
+import AlexImg from "@/public/alumni/AlexSin.webp";
+import HarnoorImg from "@/public/alumni/HarnoorKaur.webp";
+import AramImg from "@/public/alumni/AramNarang.webp";
+
 interface AlumniInfoProps {
   name: string;
   role: Uppercase<string>;
@@ -20,6 +25,31 @@ interface AlumniInfoProps {
 }
 
 export const AlumniData: AlumniInfoProps[] = [
+  {
+    name: "Aram Narang",
+    role: "CO-PRESIDENT",
+    image: AramImg,
+    currentOccupation: "Analyst at J.P. Morgan",
+    linkedin: "https://www.linkedin.com/in/aram-narang/",
+  },
+  {
+    name: "Faris Mohammady",
+    role: "CO-PRESIDENT",
+    image: FarisImg,
+    linkedin: "https://www.linkedin.com/in/faris-mohammady/",
+  },
+  {
+    name: "Alex Sin",
+    role: "INTERNAL VICE PRESIDENT",
+    image: AlexImg,
+    linkedin: "https://www.linkedin.com/in/alexsin605/",
+  },
+  {
+    name: "Harnoor Kaur",
+    role: "EXTERNAL VICE PRESIDENT",
+    image: HarnoorImg,
+    linkedin: "https://www.linkedin.com/in/harnoor-kaurr/",
+  },
   {
     name: "Hammad Manjra",
     role: "FOUNDER & ADVISOR",
