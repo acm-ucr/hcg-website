@@ -18,6 +18,12 @@ import Pepsico from "@/public/about/logos/PepsiCo.webp";
 import PWC from "@/public/about/logos/Pwc.webp";
 import ServiceNow from "@/public/about/logos/Servicenow.webp";
 import Tesla from "@/public/about/logos/Tesla.webp";
+import BRG from "@/public/about/logos/BRG.webp";
+import CityOfHope from "@/public/about/logos/CityofHope.webp";
+import ClevelandClinic from "@/public/about/logos/ClevelandClinic.webp";
+import Lenovo from "@/public/about/logos/lenovo.webp";
+import Oracle from "@/public/about/logos/oracle.webp";
+import KaiserPermanente from "@/public/about/logos/KaiserPermanente.webp";
 import { StaticImageData } from "next/image";
 
 interface CarouselDataItem {
@@ -26,6 +32,12 @@ interface CarouselDataItem {
 }
 
 export const carouselData: CarouselDataItem[] = [
+  { name: "BRG", icon: BRG },
+  { name: "City of Hope", icon: CityOfHope },
+  { name: "Cleveland Clinc", icon: ClevelandClinic },
+  { name: "Lenovo", icon: Lenovo },
+  { name: "Oracle", icon: Oracle },
+  { name: "Kaiswer Permanente", icon: KaiserPermanente },
   { name: "Boeing", icon: Boeing },
   { name: "BlackRock", icon: BlackRock },
   { name: "Tesla", icon: Tesla },

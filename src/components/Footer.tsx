@@ -3,7 +3,7 @@ import { footerLinks } from "@/data/FooterLinks";
 
 const Footer = () => {
   return (
-    <div className="from-hcg-black to-hcg-gold justify-between bg-linear-to-r px-6 py-4 md:flex md:items-end">
+    <div className="bg-hcg-black justify-between bg-linear-to-r px-6 py-4 md:flex md:items-end">
       <div className="text-hcg-white flex flex-col p-2 md:p-6">
         <p className="font-hcg-main w-fit border-b-2 border-white pb-2 font-light">
           Highlander Consulting Group

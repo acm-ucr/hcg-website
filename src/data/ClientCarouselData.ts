@@ -6,6 +6,9 @@ import EdgeSoundResearch from "@/public/work/logos/EdgeSoundResearch.webp";
 import EthosHealth from "@/public/work/logos/EthosHealth.webp";
 import Quokka from "@/public/work/logos/Quokka.webp";
 import Uruit from "@/public/work/logos/Uruit.webp";
+import RandBTea from "@/public/work/logos/RnBTea.webp";
+import Sensiply from "@/public/work/logos/SENSIPLY.webp";
+import Vestr from "@/public/work/logos/VESTR.webp";
 import { StaticImageData } from "next/image";
 
 interface ClientCarouselDataItem {
@@ -14,6 +17,9 @@ interface ClientCarouselDataItem {
 }
 
 export const clientCarouselData: ClientCarouselDataItem[] = [
+  { name: "R & B Tea", icon: RandBTea },
+  { name: "Sensiply", icon: Sensiply },
+  { name: "VESTR", icon: Vestr },
   { name: "alinea", icon: Alinea },
   { name: "BeReal", icon: BeReal },
   { name: "bookit", icon: Bookit },
