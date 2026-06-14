@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, type Variants } from "motion/react";
-import LandingPageLogo from "@/public/groupPhoto.jpg";
+import LandingPageLogo from "@/public/groupPhoto.webp";
 import Image from "next/image";
 
 const textContainer = {

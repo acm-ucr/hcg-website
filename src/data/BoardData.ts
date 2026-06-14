@@ -2,10 +2,10 @@
 import { StaticImageData } from "next/image";
 
 import MilanImg from "@/public/board/MilanMohamed.webp";
-import NikihilImg from "@/public/board/NikhilSrivastava-CoPres.jpg";
-import PranavImg from "@/public/board/PranavPochiraju-ExternalVP.jpg";
-import SofiaImg from "@/public/board/SofiaMajeed-InternalVP.jpg";
-import VyshnaviImg from "@/public/board/VyshnaviNallandigal-DirectorofMarketing.jpg";
+import NikihilImg from "@/public/board/NikhilSrivastava-CoPres.webp";
+import PranavImg from "@/public/board/PranavPochiraju-ExternalVP.webp";
+import SofiaImg from "@/public/board/SofiaMajeed-InternalVP.webp";
+import VyshnaviImg from "@/public/board/VyshnaviNallandigal-DirectorofMarketing.webp";
 
 interface BoardInfoProps {
   name: string;
