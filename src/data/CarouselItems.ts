@@ -18,11 +18,11 @@ import Pepsico from "@/public/about/logos/PepsiCo.webp";
 import PWC from "@/public/about/logos/Pwc.webp";
 import ServiceNow from "@/public/about/logos/Servicenow.webp";
 import Tesla from "@/public/about/logos/Tesla.webp";
-import BRG from "@/public/about/logos/BRG.jpg";
+import BRG from "@/public/about/logos/BRG.webp";
 import CityOfHope from "@/public/about/logos/CityofHope.webp";
-import ClevelandClinic from "@/public/about/logos/ClevelandClinic.jpg";
-import Lenovo from "@/public/about/logos/lenovo.png";
-import Oracle from "@/public/about/logos/oracle.png";
+import ClevelandClinic from "@/public/about/logos/ClevelandClinic.webp";
+import Lenovo from "@/public/about/logos/lenovo.webp";
+import Oracle from "@/public/about/logos/oracle.webp";
 import KaiserPermanente from "@/public/about/logos/KaiserPermanente.webp";
 import { StaticImageData } from "next/image";
 
