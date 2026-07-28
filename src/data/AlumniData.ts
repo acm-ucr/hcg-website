@@ -27,26 +27,26 @@ interface AlumniInfoProps {
 export const AlumniData: AlumniInfoProps[] = [
   {
     name: "Aram Narang",
-    role: "CO-PRESIDENT",
+    role: "ADVISOR",
     image: AramImg,
     currentOccupation: "Analyst at J.P. Morgan",
     linkedin: "https://www.linkedin.com/in/aram-narang/",
   },
   {
     name: "Faris Mohammady",
-    role: "CO-PRESIDENT",
+    role: "ADVISOR",
     image: FarisImg,
     linkedin: "https://www.linkedin.com/in/faris-mohammady/",
   },
   {
     name: "Alex Sin",
-    role: "INTERNAL VICE PRESIDENT",
+    role: "ADVISOR",
     image: AlexImg,
     linkedin: "https://www.linkedin.com/in/alexsin605/",
   },
   {
     name: "Harnoor Kaur",
-    role: "EXTERNAL VICE PRESIDENT",
+    role: "ADVISOR",
     image: HarnoorImg,
     linkedin: "https://www.linkedin.com/in/harnoor-kaurr/",
   },
